@@ -1,0 +1,663 @@
+.App {
+  background-color: #fefefe;
+  height: 100vh;
+  width: 100%;
+}
+/* GENERAL */
+@import url('https://fonts.googleapis.com/css2?family=Carattere&family=Kaushan+Script&family=Permanent+Marker&family=Rajdhani:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Diphylleia&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "rajdhani", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  background-color: #F1F1F1; 
+  justify-content: space-around;
+  align-items: center;
+  height: 15vh;
+  
+}
+
+
+
+
+
+
+
+.logo {
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: "Kaushan Script", cursive;
+}
+
+.logo:hover {
+  cursor: default;
+  
+}
+
+
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: fit-content;
+  margin: 0 2rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  
+}
+.profile-pic {
+  border-radius: 50%;
+  width: auto;
+}
+.section__pic-container {
+  width: 335px;
+  height: 335px;  
+  border-radius: 50%;  
+}
+
+.section-container {
+  gap: 4rem;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column-reverse;
+}
+
+.section__pic-container {
+  display: flex;
+  margin: auto 0;
+}
+
+
+.section__text {
+  align-self: center;
+  text-align: center;
+  
+}
+
+.section__text  {
+  
+  font-weight: 600;
+  font-size: 1.5rem; /* Adjusted font size */
+}
+
+.section__text__p1 {
+  font-family: 'Carattere', cursive;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 1rem; /* Added margin */
+  font-size: 2.5rem; /* Adjusted font size */
+}
+
+.section__text__p2 {
+  font-family: 'Carattere', cursive;
+  text-align: center;
+  font-weight: 200;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+    margin-bottom: 1rem; /* Added margin */
+}
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 600px) {
+  .btn-container {
+    gap: 2rem;
+  }
+
+}
+
+/* SOCIAL ICONS */
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 3rem;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.3);
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+  #profile {
+    margin-top: 2rem;
+  }
+  
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  margin-top: 8rem;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.education-box {
+  background-color: #fff;
+  border: 0.2rem solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: calc(33.33% - 1rem);
+  margin: 0.5rem;
+  box-sizing: border-box;
+}
+
+.education-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-info {
+  padding: 1rem;
+}
+
+.education-info h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.date,
+.class,
+.degree,
+.gpa,
+.stream {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.5rem 0;
+  font-family: 'Rajdhani', sans-seri
+}
+
+.about-pic {
+  border-radius: 50%;
+  margin-top: 10px;
+  height: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    height: fit-content;
+  }
+  .about-containers {
+    flex-direction: column; /* Change to column layout for small screens */
+    gap: 2rem;
+     /* Remove fixed height for responsiveness */
+  }
+
+  .education-box {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* SKILL SECTION */
+.skills-section {
+  text-align: center;
+  margin: 2rem ;
+}
+
+h2 {
+  font-family: "rajdhani", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem; /* Added margin */
+}
+
+p{
+  font-family: "rajdhani", sans-serif;
+  font-size: 1rem;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-box {
+  text-align: center;
+  margin: 10px;
+  width: calc(33.33% - 1rem); /* Set to 33.33% for three boxes in a row with gap */
+  
+}
+
+.skill-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  
+}
+
+.icon-info {
+  text-align: center;
+}
+
+.floating-icon {
+  width: 80px;
+  height: 80px;
+  margin: 10px 0px 0px 0px;
+  padding: 15px;
+  animation: floatUpDown 10s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0%, 50% {
+    transform: scale(1.3);
+  }
+  25%, 75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .skill-box {
+    width: 100%; /* Set to 100% for a single column on smaller screens */
+  }
+}
+
+
+
+
+
+
+/* PROJECT SECTION */
+
+#projects {
+  position: relative;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.projects-container {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.project-box {
+  background-color: #fff;
+  border: 0.4rem solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: calc(30% - 1rem); /* Set to 25% for four boxes in a row with gap */
+  margin: 0.5rem; /* Adjust margin for gap between boxes */
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.project-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  font-family: "kaushan Script", sans-serif;
+}
+
+.project-details {
+  text-align: justify;
+  font-size: 1rem;
+  color: #555;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.project-details ul {
+  font-family: "rajdhani", sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-details li::before {
+  content: '\2022'; /* Unicode character for a bullet point */
+  color: red;
+  margin-right: 0.5em;
+}
+.project-details li {
+  font-family: 'rajdhani', sans-serif; /* Replace 'Your Font Here' with your desired font-family */
+}
+.project-details b {
+  font-family: rajdhani, sans-serif;
+  font-size: 1.2rem;
+  display: block; /* Make the <b> element a block-level element */
+  text-align: center;
+  margin-top: 1rem; /* Adjust the margin as needed */
+}
+
+.project-buttons {
+  font-family: "rajdhani", sans-serif;
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center; /* Center the buttons */
+  gap: 2rem; /* Adjust the gap between buttons */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.project-btn {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #4c4e51;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 1.5rem;
+  
+  border: 0;
+  font-family: "rajdhani", sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.project-btn:hover,
+.project-btn:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.project-btn:active {
+  background: var(--color);
+  color: #fff;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 1002px) {
+  .project-box {
+    width: 100%; /* Set to 100% for a single column on smaller screens */
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-box {
+    width: 100%; /* Set to 50% for two boxes in a row with gap */
+  }
+  .project-btn {
+    width: auto;
+  }
+}
+
+/* Coding Challenge Section */
+/* CODING PROFILES SECTION */
+
+#coding-profiles {
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.coding-profiles-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.coding-profile-box {
+  background-color: #fff;
+  border: 0.2rem solid #ddd;
+  border-radius: 1rem;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: calc(30% - 1rem); /* Set to 33.33% for three boxes in a row with gap */
+  margin: 0.5rem; /* Adjust margin for gap between boxes */
+}
+
+.coding-profile-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.profile-icon {
+  width: 80%;
+  height: 80px;
+  margin: 10px;
+  padding: 15px;
+
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .coding-profiles-container {
+    flex-direction: column;
+  }
+
+  .coding-profile-box {
+    width: 100%; /* Set to 100% for a single column on smaller screens */
+  }
+}
+
+
+/* CONTACT SECTION */
+
+#contact {
+  position: relative;
+  text-align: center;
+  margin-top: 8rem;
+  height: fit-content;
+}
+
+.contact-section {
+  margin-bottom: 4rem; /* Added margin at the bottom */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  font-size: 1.5rem;
+}
+a{
+  text-decoration: none;
+  color: #555;
+
+}
+.email-icon {
+  font-size: 2rem;
+  color: #555;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #contact {
+    margin-top: 4rem; 
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .project-btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact-container {
+    gap: 1rem; 
+  }
+  
+  .contact-buttons {
+    align-items: center;
+    gap: 0.5rem; 
+  }
+  
+  
+}
+@media screen and (max-width: 485px) {
+  .contact-info {
+    font-size: 0.8rem; 
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    width: fit-content;
+    height: fit-content;
+  }
+  .contact-buttons {
+    gap: 0.25rem; 
+  }
+  .email{
+    width: 20%;
+  }
+  
+}
+
+
+
+/* FOOTER SECTION */
+footer {
+  
+  margin: 0 1rem;
+}
+.footer-section {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+.copyright {
+  font-size: 1rem;
+  color: #777; 
+}
+
+@media screen and (max-width: 600px) {
+  .footer-section {
+    width: 100%;
+    margin-top: 4rem; 
+    margin-bottom: 4rem; 
+}
+}
